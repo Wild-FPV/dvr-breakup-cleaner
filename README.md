@@ -15,3 +15,5 @@ Using machine learning, this program is able to detect and remove frames contain
 ### Using the model
 
 **script 3 :** use model to detect frames with breakup in given dvr video file and replace those frames with "averages" of frames that came before and after it
+
+If you want to try out the code yourself, make sure to download opencv-python by using the following command : `pip install opencv-python`
