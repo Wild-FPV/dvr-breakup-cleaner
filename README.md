@@ -12,13 +12,15 @@ Using machine learning, this program is able to detect and remove frames contain
 
 **script 2 :** go through each folder and train a model based on patterns in frames.
 
+Create model using [**liner.ai**](https://liner.ai/) : I might come back to this step and make my own models "manually", thought process is that I could either make the model based on pixel values or features of the frames (contrast, textures, edges, etc.). However, I was able to find an application called liner.ai that can create machine learning models in a couple of different formats given data in exactly the format we have it in here. I have added the created model in a variety of formats here (Standard Keras, Tensorflow, Tensorflow Lite). *Note : model_std.keras - standard Keras model, model.keras - Tensorflow model, and model.tflite - Tensorflow Lite model.*
+
 ### Using the model
 
 **script 3 :** use model to detect frames with breakup in given dvr video file and replace those frames with "averages" of frames that came before and after it
 
-If you want to try out the code yourself, make sure to download opencv-python by using the following command : `pip install opencv-python`
+If you want to try out the code yourself, make sure to download opencv-python by using the following command : `pip install opencv-python`.
+
+If you want to try making your own model using this code, make sure to download tensorflow and PIL using : `pip install tensorflow` and `pip install Pillow`. (Note tensorflow requires python version 3.9-3.11)
 
 
-### Latest Update :
-
-I'm going to pause development of this for a little while but what I have in mind right now for when I come back to working on this is that I'll make two different ML models and see which one works better. One will learn just based off of the pixel values and the other will learn based on features of the frame samples (contrast, textures, edges, etc.). Maybe I can then combine the two methods together. Feel free to leave questions or suggestions here if you have any!
+### Currently working on script 3 (final .exe version)
