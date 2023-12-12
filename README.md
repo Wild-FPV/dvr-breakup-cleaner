@@ -24,3 +24,5 @@ If you want to try making your own model using this code, make sure to download 
 
 
 ### Currently working on script 3 (final .exe version)
+
+Currently working on greatly improving speed of video frame classification (currently takes around 24 hours to process one 3 minute long DVR file (yikes)).
