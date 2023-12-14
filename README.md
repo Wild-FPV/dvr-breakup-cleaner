@@ -16,7 +16,7 @@ Create model using [**liner.ai**](https://liner.ai/) : I might come back to this
 
 ### Using the model
 
-**script 3 :** use model to detect frames with breakup in given dvr video file and replace those frames with "averages" of frames that came before and after it
+**script 3 :** use model to detect frames with breakup in given dvr video file and replace those frames with weighted averages of "clean" frames that came before and after it.
 
 If you want to try out the code yourself, make sure to download opencv-python by using the following command : `pip install opencv-python`.
 
@@ -25,4 +25,4 @@ If you want to try making your own model using this code, make sure to download 
 
 ### Currently working on script 3 (final .exe version)
 
-Currently working on greatly improving speed of video frame classification (currently takes around 24 hours to process one 3 minute long DVR file (yikes)).
+Currently working on improving speed of video frame classification and an alternative approach for frame interpolation to hopefully produce a better result.
