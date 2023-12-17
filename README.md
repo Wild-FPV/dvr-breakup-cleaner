@@ -25,4 +25,5 @@ If you want to try making your own model using this code, make sure to download 
 
 ### Currently working on script 3 (final .exe version)
 
-Currently working on improving speed of video frame classification and an alternative approach for frame interpolation to hopefully produce a better result.
+Currently working on improving speed of video frame classification and an alternative approach for frame interpolation to hopefully produce a better result. The model may need some work as well, maybe more training data would help. F1 score is about 90% currently but the rare incorrect predictions 
+have a pretty noticeable impact on the output.
