@@ -16,7 +16,6 @@ output_details = model.get_output_details()
 model.resize_tensor_input(input_details[0]['index'], (1, 224, 224, 3))
 model.allocate_tensors()
 
-######################################################################
 
 #videoPath = input("Input video filename : ")
 videoPath="testdvr.avi"
@@ -69,24 +68,29 @@ for frame in images:
         classification_results.append(1)
     else:
         classification_results.append(0)
-    
-print(classification_results)
 
 counter = 0
 for frame in images:
     if counter != len(images)-1:
         if classification_results[counter]:
             last_clean_frame = frame
-            print("Counter is " + str(counter) + " and frame is clean")
+            last_clean_frame_index = counter
         else:
             temp_counter = counter
             if classification_results[counter+1]:
                 next_clean_frame = images[counter+1]
+                next_clean_frame_index = counter+1
             else:
                 while not classification_results[temp_counter]:
                     temp_counter += 1
                 next_clean_frame = images[temp_counter]
-            images[counter] = cv2.addWeighted(last_clean_frame,0.5,next_clean_frame,0.5,0)
+                next_clean_frame_index = temp_counter
+            frames_to_last = counter-last_clean_frame_index
+            frames_to_next = next_clean_frame_index-counter
+            
+            next_frame_coeff = (frames_to_next/frames_to_next + frames_to_last)/10
+            images[counter] = cv2.addWeighted(last_clean_frame,1-next_frame_coeff,next_clean_frame,next_frame_coeff,0)
+            #images[counter] = cv2.resize(last_clean_frame, (width,height),interpolation=cv2.INTER_NEAREST)
         counter += 1
 for frame in images:
     frame = cv2.cvtColor(frame,cv2.COLOR_RGB2BGR)

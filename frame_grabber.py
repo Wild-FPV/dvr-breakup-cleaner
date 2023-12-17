@@ -2,9 +2,7 @@ import cv2
 import os
 import random
 
-dvr_filename = 'DVRforGrabber.avi'
-#change to actual video filename
-
+dvr_filename = input("DVR filename : ")
 output_folder_name = 'frame samples'
 
 sample_percent = 5
