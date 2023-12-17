@@ -2,10 +2,8 @@ import os
 import shutil
 
 current_dir = os.getcwd()
-print(current_dir)
 
-folder_name = 'frame samples'
-
+folder_name = 'frame_samples'
 breakup_folder_name = 'breakup'
 clean_folder_name = 'clean'
 

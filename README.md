@@ -20,7 +20,7 @@ Create model using [**liner.ai**](https://liner.ai/) : I might come back to this
 
 If you want to try out the code yourself, make sure to download opencv-python by using the following command : `pip install opencv-python`.
 
-If you want to try making your own model using this code, make sure to download tensorflow and PIL using : `pip install tensorflow` and `pip install Pillow`. (Note tensorflow requires python version 3.9-3.11)
+If you want to try making your own model using this code, make sure to download tensorflow using : `pip install tensorflow`. (Note tensorflow requires python version 3.9-3.11)
 
 
 ### Currently working on script 3 (final .exe version)
